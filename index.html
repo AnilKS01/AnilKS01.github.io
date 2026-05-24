@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anil Kumar Portfolio</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+section{
+    padding:90px 0;
+}
+
+h1,h2,h3,h4{
+    font-weight:700;
+}
+
+p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+a{
+    text-decoration:none;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:42px;
+}
+
+.section-title span{
+    color:#38bdf8;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 32px;
+    border-radius:50px;
+    font-weight:600;
+    margin:10px;
+    transition:0.4s;
+}
+
+.btn-primary{
+    background:#38bdf8;
+    color:white;
+}
+
+.btn-primary:hover{
+    background:#0ea5e9;
+    transform:translateY(-5px);
+}
+
+.btn-outline{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.btn-outline:hover{
+    background:#38bdf8;
+    color:white;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#020617;
+    z-index:1000;
+    padding:20px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(to right,#020617,#0f172a);
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:65px;
+    line-height:1.2;
+}
+
+.hero-text span{
+    color:#38bdf8;
+}
+
+.hero-text h3{
+    margin:20px 0;
+    font-size:28px;
+    color:#94a3b8;
+}
+
+.hero-text p{
+    margin-bottom:30px;
+}
+
+.hero-image{
+    text-align:center;
+}
+
+.hero-image img{
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    object-fit:cover;
+    border:8px solid #38bdf8;
+    box-shadow:0 0 50px rgba(56,189,248,0.6);
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.about-card{
+    background:#1e293b;
+    padding:40px;
+    border-radius:25px;
+    transition:0.4s;
+}
+
+.about-card:hover{
+    transform:translateY(-10px);
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.skill-card{
+    background:#1e293b;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.skill-card:hover{
+    background:#38bdf8;
+    transform:translateY(-10px);
+}
+
+.skill-card i{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   EXPERIENCE
+=========================== */
+
+.timeline{
+    position:relative;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    width:4px;
+    height:100%;
+    background:#38bdf8;
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:50%;
+    position:relative;
+    padding:20px 40px;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-content{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+}
+
+.timeline-content h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    margin-bottom:15px;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats{
+    background:#1e293b;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.stat-card{
+    text-align:center;
+    padding:40px;
+}
+
+.stat-card h2{
+    font-size:55px;
+    color:#38bdf8;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info,
+.contact-form{
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+}
+
+.contact-info p{
+    margin:20px 0;
+}
+
+.contact-info i{
+    color:#38bdf8;
+    margin-right:10px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+}
+
+.contact-form button{
+    width:100%;
+    border:none;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:30px 0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:991px){
+
+.hero-content,
+.about-grid,
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.hero{
+    padding-top:140px;
+}
+
+.hero-text{
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:45px;
+}
+
+.hero-image img{
+    width:300px;
+    height:300px;
+}
+
+.timeline::before{
+    left:0;
+}
+
+.timeline-item{
+    width:100%;
+    left:0 !important;
+    text-align:left !important;
+    padding-left:40px;
+}
+
+nav ul{
+    display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===========================
+   NAVBAR
+=========================== -->
+
+<nav>
+
+<div class="container nav-container">
+
+<div class="logo">ANIL KUMAR</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#powerbi">Power BI</a></li>
+<li><a href="#excel">Excel</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+
+</nav>
+
+<!-- ===========================
+   HERO SECTION
+=========================== -->
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<h1>Hello, I'm <span>Anil Kumar</span></h1>
+
+<h3>Senior Revenue & Billing Operations Analyst</h3>
+
+<p>
+12+ years of experience in Revenue Operations, Power BI,
+Billing Analytics, Excel Automation, Financial Reporting,
+Accounts Receivable, and Data Visualization.
+</p>
+
+<a href="anil_resume.pdf" target="_blank" class="btn btn-primary">
+<i class="fa-solid fa-eye"></i> View Resume
+</a>
+
+<a href="anil_resume.pdf" download class="btn btn-outline">
+<i class="fa-solid fa-download"></i> Download Resume
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<!-- ADD YOUR PHOTO -->
+<img src="Anil.JPG" alt="Profile Image">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   ABOUT
+=========================== -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About <span>Me</span></h2>
+</div>
+
+<div class="about-grid">
+
+<div class="about-card">
+<h3>Professional Summary</h3>
+
+<p>
+Results-driven Revenue and Billing Operations Leader with
+12+ years of experience in O2C, Revenue Recognition,
+Accounts Receivable, Global Billing Operations,
+Power BI, Excel, and Financial Analytics.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>Achievements</h3>
+
+<p>
+✔ Platinum Award Winner<br><br>
+✔ Managed 300+ Global Projects<br><br>
+✔ Developed Power BI KPI Dashboards<br><br>
+✔ Automated Reporting Processes<br><br>
+✔ Improved Cash Flow & DSO Performance
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   SKILLS
+=========================== -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Technical <span>Skills</span></h2>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<i class="fa-solid fa-chart-simple"></i>
+<h3>Power BI</h3>
+<p>DAX, Dashboards, Power Query, Data Modeling</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-file-excel"></i>
+<h3>Advanced Excel</h3>
+<p>Pivot Tables, Reporting, Automation, Dashboards</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-database"></i>
+<h3>ERP Systems</h3>
+<p>SAP, Oracle, PeopleSoft, Salesforce CRM</p>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Financial Analytics</h3>
+<p>Revenue Reporting, Billing Analytics, Forecasting</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   EXPERIENCE
+=========================== -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Work <span>Experience</span></h2>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Hitachi Digital Services</h3>
+<h4>Senior Accounting Professional</h4>
+<p>Aug 2021 - Present</p>
+<p>
+Leading billing and revenue recognition for 300+ global projects.
+Developed Power BI dashboards and automated reporting processes.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Randstad Offshore Services</h3>
+<h4>Senior Business Specialist</h4>
+<p>Jul 2019 - Aug 2021</p>
+<p>
+Created Power BI reports, automated Excel reporting,
+and managed end-to-end billing operations.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Deloitte Support Services</h3>
+<h4>Senior Analyst</h4>
+<p>Jun 2017 - Jul 2019</p>
+<p>
+Handled accounts receivable, collections dashboards,
+MIS reporting, and financial analytics.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Clarivate Analytics</h3>
+<h4>Senior Processing Associate</h4>
+<p>Jun 2016 - May 2017</p>
+<p>
+Generated invoices in SAP and supported reporting operations.
+</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Genpact India Pvt Ltd</h3>
+<h4>Process Developer</h4>
+<p>Sep 2013 - Jun 2016</p>
+<p>
+Handled customer payments, reconciliation,
+and discrepancy analysis.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   POWER BI PROJECTS
+=========================== -->
+
+<section id="powerbi">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Power BI <span>Projects</span></h2>
+</div>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<img src="images/powerbi1.jpg">
+<div class="project-content">
+<h3>Revenue Analytics Dashboard</h3>
+<p>Revenue trends, forecasting, and KPI analytics dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi2.jpg">
+<div class="project-content">
+<h3>Accounts Receivable Dashboard</h3>
+<p>DSO tracking and collections monitoring dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi3.jpg">
+<div class="project-content">
+<h3>Billing Performance Dashboard</h3>
+<p>Invoice tracking and billing insights dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi4.jpg">
+<div class="project-content">
+<h3>Financial KPI Dashboard</h3>
+<p>Executive-level finance and KPI reporting dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi5.jpg">
+<div class="project-content">
+<h3>Cash Flow Dashboard</h3>
+<p>Cash flow analysis and forecasting solution.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi6.jpg">
+<div class="project-content">
+<h3>Global Revenue Tracker</h3>
+<p>Regional revenue tracking dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi7.jpg">
+<div class="project-content">
+<h3>SOX Compliance Dashboard</h3>
+<p>Compliance and audit reporting dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi8.jpg">
+<div class="project-content">
+<h3>Customer Payment Dashboard</h3>
+<p>Payment trends and outstanding analysis dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi9.jpg">
+<div class="project-content">
+<h3>Invoice Automation Tracker</h3>
+<p>Invoice automation and efficiency tracking.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/powerbi10.jpg">
+<div class="project-content">
+<h3>Executive MIS Dashboard</h3>
+<p>Business management and reporting dashboard.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   EXCEL PROJECTS
+=========================== -->
+
+<section id="excel">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Excel <span>Projects</span></h2>
+</div>
+
+<div class="projects-grid">
+
+<div class="project-card">
+<img src="images/excel1.jpg">
+<div class="project-content">
+<h3>Dynamic Sales Dashboard</h3>
+<p>Interactive Excel sales dashboard.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel2.jpg">
+<div class="project-content">
+<h3>Billing Tracker</h3>
+<p>Invoice and payment tracking workbook.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel3.jpg">
+<div class="project-content">
+<h3>AR Aging Report</h3>
+<p>Receivables aging analysis report.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel4.jpg">
+<div class="project-content">
+<h3>Invoice Generator</h3>
+<p>Automated invoice generation workbook.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel5.jpg">
+<div class="project-content">
+<h3>Payslip Generator</h3>
+<p>Salary and payslip automation system.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel6.jpg">
+<div class="project-content">
+<h3>Expense Tracker</h3>
+<p>Expense analysis and budgeting workbook.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel7.jpg">
+<div class="project-content">
+<h3>Forecasting Workbook</h3>
+<p>Business forecasting and planning workbook.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel8.jpg">
+<div class="project-content">
+<h3>KPI Dashboard</h3>
+<p>KPI monitoring and reporting solution.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel9.jpg">
+<div class="project-content">
+<h3>Budget Planner</h3>
+<p>Monthly and yearly budget planning system.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="images/excel10.jpg">
+<div class="project-content">
+<h3>Revenue Reconciliation</h3>
+<p>Financial reconciliation workbook.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   STATS
+=========================== -->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2 class="counter" data-target="12">0</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="300">0</h2>
+<p>Projects Managed</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="20">0</h2>
+<p>Dashboards Created</p>
+</div>
+
+<div class="stat-card">
+<h2 class="counter" data-target="5">0</h2>
+<p>ERP Systems Worked</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   CONTACT
+=========================== -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact <span>Me</span></h2>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>Get In Touch</h3>
+
+<p><i class="fa-solid fa-phone"></i> +91 8886134724</p>
+
+<p><i class="fa-solid fa-envelope"></i> anilkodhiripaka@gmail.com</p>
+
+<p><i class="fa-solid fa-location-dot"></i> Secunderabad, Telangana, India</p>
+
+<p><i class="fa-solid fa-language"></i> English, Telugu</p>
+
+</div>
+
+<div class="contact-form">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button class="btn btn-primary">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+   FOOTER
+=========================== -->
+
+<footer>
+
+<div class="container">
+
+<p>
+© 2026 Anil Kumar Portfolio | All Rights Reserved
+</p>
+
+</div>
+
+</footer>
+
+<!-- ===========================
+   JAVASCRIPT
+=========================== -->
+
+<script>
+
+/* COUNTER ANIMATION */
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+counter.innerText = '0';
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute('data-target');
+const c = +counter.innerText;
+
+const increment = target / 100;
+
+if(c < target){
+
+counter.innerText = `${Math.ceil(c + increment)}`;
+
+setTimeout(updateCounter,20);
+
+}else{
+counter.innerText = target;
+}
+
+};
+
+updateCounter();
+
+});
+
+/* NAVBAR SHADOW */
+
+window.addEventListener('scroll',function(){
+
+const nav = document.querySelector('nav');
+
+if(window.scrollY > 50){
+nav.style.background = "#020617";
+nav.style.boxShadow = "0 5px 20px rgba(0,0,0,0.5)";
+}else{
+nav.style.boxShadow = "none";
+}
+
+});
+
+</script>
+
+</body>
+</html>
